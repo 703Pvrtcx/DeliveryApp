@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+
+      <ion-menu-button>
+
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>Contact</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-searchbar (input)="search($event)" (change)="addressCheck($event)"     [value]="selectedAddress"></ion-searchbar>
+
+
+
+
+  
+  
+ 
+  
+      <ion-item *ngFor="let address of addresses ; let i=index" (click)="onSelect(address, i)" >
+  
+       {{ address}}
+      
+        </ion-item>
+
+</ion-content>

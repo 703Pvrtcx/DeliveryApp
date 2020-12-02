@@ -1,0 +1,8 @@
+{
+  "name": "CodeMobileApp",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

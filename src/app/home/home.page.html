@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-toolbar color='primary'>
+        <ion-buttons slot="start">
+            <ion-menu-button>
+
+            </ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Delivery Service
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+
+    <ion-item>
+
+        <ion-label position="floating">Name</ion-label>
+        <ion-input type="text" [(ngModel)]="cat.name"> </ion-input>
+    </ion-item>
+
+    <ion-item>
+
+        <ion-label position="floating">Colour</ion-label>
+        <ion-input type="text" [(ngModel)]="cat.colour"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+
+        <ion-label position="floating">Age</ion-label>
+        <ion-input type="number" [(ngModel)]="cat.age"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" color="secondary" (click)="submit()">Submit</ion-button>
+
+    <ion-button expand="full" color="dark" (click)="goNext()">Next Page</ion-button>
+
+    <div *ngIf="cartList.length> 0">
+
+        <div *ngFor="let cart of cartList">
+            {{cart.name}} {{cart.colour}} {{cart.age}}
+        </div>
+    </div>
+
+    <app-item-list></app-item-list>
+
+</ion-content>
